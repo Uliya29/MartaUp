@@ -1,3 +1,148 @@
+*
+  box-sizing: border-box
+
+*,
+*::after,
+*::before
+  box-sizing: inherit
+  
+body 
+  font-family: "Source Sans 3", sans-serif
+  font-optical-sizing: auto
+  font-weight: 400
+  font-style: normal
+  font-size: 15px
+  line-height: 24px
+  color: #272727
+
 img
   max-width: 100%
-  
+
+a
+  text-decoration: none  
+
+ul
+  list-style: none
+
+.container
+  max-width: 1200px
+  padding: 0 15px
+  margin: 0 auto
+
+.header
+  background-image: url(../images/header-background.jpg)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: top center
+  background-color: #0DA5D0
+  padding-top: 30px
+  min-height: 793px
+
+.header__top
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 141px
+
+.logo
+  max-width: 164px
+  max-height: 37px
+
+.header__nav-list
+  display: flex
+  gap: 50px
+  margin: 0
+  font-weight: 600
+
+.header__nav-link,
+  color: rgba(255, 255, 255, 0.5)
+  text-transform: uppercase
+  transition: all 0.3s
+
+.header__nav-link:hover
+    color: rgba(255, 255, 255, 1) 
+
+.authorization__login,
+.authorization__sign-up
+  color: #fff
+  text-transform: uppercase
+  padding: 10px 44px
+  transition: all 0.3s
+  font-weight: 600
+
+
+.authorization__login:hover,
+.authorization__sign-up:hover
+  background-color: #fff
+  color: #250F8A
+  border-radius: 20px
+
+.header__cover
+  margin-bottom: 55px
+  display: flex
+
+.header__cover-content
+  max-width: 506px
+
+.title
+  color: #fff
+  font-size: 45px
+  line-height: 60px
+  font-weight: 700
+
+.title-descr
+  color: #fff
+  font-size: 24px
+  line-height: 55px
+
+.header__btn
+  width: 200px
+  height: 50px
+  background-color: #FFCA00
+  font-family: "Source Sans 3", sans-serif
+  font-optical-sizing: auto
+  font-style: normal
+  font-size: 15px
+  line-height: 24px
+  color: #250F8A
+  text-transform: uppercase
+  font-weight: 600
+  border: none
+  border-radius: 25px
+  margin-top: 60px
+  cursor: pointer
+  transition: all 0.3s
+
+.header__btn:hover
+  width: 250px
+  height: 65px
+
+.header__slider
+  margin-left: 66px
+  max-width: 628px
+
+.header__slider-icon 
+  max-width: 516px
+
+.header__slider-dots
+  list-style: none
+  position: absolute
+  right: 0
+  top: 20%
+  button
+    border: none
+    background-color: #fff
+    opacity: 0.5
+    font-size: 0
+    border-radius: 3.5px
+    padding: 0
+    width: 7px
+    height: 7px
+    cursor: pointer
+    outline: none
+    margin: 10px auto
+    display: block
+  .slick-active
+    button
+      opacity: 1
+      width: 15px

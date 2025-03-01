@@ -3,20 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Roboto+Condensed:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/index.css">
   <title>MartaUp</title>
 </head>
 <body>
   <header class="header">
     <div class="container">
       <div class="header__top">
-
+        <a href="#"><img class="logo" src="images/logo.svg" alt="logo"></a>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Home</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Work</a>    
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">About</a>  
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Contact</a>  
+            </li>
+          </ul>
+        </nav>
+        <div class="authorization">
+          <a class="authorization__login" href="#">login</a>
+          <a class="authorization__sign-up" href="#">sign up</a>
+        </div> 
       </div>
       <div class="header__cover">
-        
+        <div class="header__cover-content">
+          <h1 class="title">We Build Apps & Websites
+          for Your Business</h1>
+          <p class="title-descr">For startups, For businesses & For you</p>
+          <button class="header__btn">Request a quote</button>
+        </div>
+        <div class="header__slider">
+          <img class="header__slider-icon" src="images/header-slider-icon-1.svg" alt="slider icon">
+          <img class="header__slider-icon" src="images/header-slider-icon-1.svg" alt="slider icon">
+          <img class="header__slider-icon" src="images/header-slider-icon-1.svg" alt="slider icon">
+          <img class="header__slider-icon" src="images/header-slider-icon-1.svg" alt="slider icon">
+          <img class="header__slider-icon" src="images/header-slider-icon-1.svg" alt="slider icon">
+        </div>
       </div>
     </div>
   </header>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
