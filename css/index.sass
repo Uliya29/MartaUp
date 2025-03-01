@@ -1,10 +1,5 @@
 *
   box-sizing: border-box
-
-*,
-*::after,
-*::before
-  box-sizing: inherit
   
 body 
   font-family: "Source Sans 3", sans-serif
@@ -37,6 +32,7 @@ ul
   background-color: #0DA5D0
   padding-top: 30px
   min-height: 793px
+  margin-bottom: 55px
 
 .header__top
   display: flex
@@ -78,13 +74,12 @@ ul
   border-radius: 20px
 
 .header__cover
-  margin-bottom: 55px
   display: flex
 
 .header__cover-content
   max-width: 506px
 
-.title
+.header__title
   color: #fff
   font-size: 45px
   line-height: 60px
@@ -146,3 +141,89 @@ ul
     button
       opacity: 1
       width: 15px
+
+.specialised
+  padding-bottom: 93px
+  background-image: url(../images/specialised-bg.svg)
+  background-position: left 0 top 9px
+  background-repeat: no-repeat
+  text-align: center
+
+.title 
+  font-size: 35px
+  line-height: 45px
+  font-weight: 700
+  color: #202020
+
+.specialised__cards
+  display: flex
+  max-width: 980px
+  justify-content: space-between
+  margin: 96px auto 0
+
+.specialised__card 
+  text-align: center
+  width: 280px
+  height: 280px
+  
+.specialised__card-img 
+  margin-bottom: 23px
+  height: 158px
+
+.specialised__card-title 
+  margin-bottom: 10px
+  font-size: 20px
+  line-height: 24px
+  font-weight: 700
+
+.specialised__card-text
+  opacity: 0.7
+
+.work 
+  padding: 58px
+  background-color: #F4F9FD
+  background-image: url(../images/work-bg.svg)
+  background-position: right
+  background-repeat: no-repeat
+
+.work__card 
+  display: flex
+  margin-bottom: 55px
+  justify-content: space-between
+
+.work__title
+  margin-bottom: 30px
+
+.work__content 
+  display: flex
+  flex-direction: column
+  justify-content: center
+  max-width: 460px
+  padding-left: 50px
+  background-repeat: no-repeat
+
+.work__card:nth-child(2n)
+  .work__img
+    order: 1
+  .work__content
+    order: 2
+
+.work__card:nth-child(3n+1)
+  .work__content
+    background-image: url(../images/work-title-1.svg)
+    background-position: left 25px top 80px
+
+.work__card:nth-child(3n+2)
+  .work__content
+    background-image: url(../images/work-title-2.svg)
+    background-position: left 30px top 100px
+
+.work__card:nth-child(3n+3)
+  .work__content
+    background-image: url(../images/work-title-3.svg)
+    background-position: left 10px top 120px
+
+
+.work__text
+  margin-bottom: 20px
+  opacity: 0.7
