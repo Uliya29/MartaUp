@@ -15,14 +15,33 @@ img
 
 a
   text-decoration: none  
+  line-height: 0
 
 ul
   list-style: none
+  margin: 0
+  padding: 0
+
+.body--no-scroll
+  height: 100vh
+  overflow: hidden
+  padding-right: 15px
 
 .container
   max-width: 1200px
   padding: 0 15px
   margin: 0 auto
+
+.logo
+  max-width: 164px
+  max-height: 37px
+
+.title 
+  font-size: 35px
+  line-height: 45px
+  font-weight: 700
+  color: #202020
+
 
 .header
   background-image: url(../images/header-background.jpg)
@@ -34,113 +53,131 @@ ul
   min-height: 793px
   margin-bottom: 55px
 
-.header__top
-  display: flex
-  justify-content: space-between
-  align-items: center
-  margin-bottom: 141px
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    text-justify: center
+    margin-bottom: 141px
 
-.logo
-  max-width: 164px
-  max-height: 37px
-
-.header__nav-list
-  display: flex
-  gap: 50px
-  margin: 0
-  font-weight: 600
-
-.header__nav-link,
-  color: rgba(255, 255, 255, 0.5)
-  text-transform: uppercase
-  transition: all 0.3s
-
-.header__nav-link:hover
-    color: rgba(255, 255, 255, 1) 
-
-.authorization__login,
-.authorization__sign-up
-  color: #fff
-  text-transform: uppercase
-  padding: 10px 44px
-  transition: all 0.3s
-  font-weight: 600
-
-
-.authorization__login:hover,
-.authorization__sign-up:hover
-  background-color: #fff
-  color: #250F8A
-  border-radius: 20px
-
-.header__cover
-  display: flex
-
-.header__cover-content
-  max-width: 506px
-
-.header__title
-  color: #fff
-  font-size: 45px
-  line-height: 60px
-  font-weight: 700
-
-.title-descr
-  color: #fff
-  font-size: 24px
-  line-height: 55px
-
-.header__btn
-  width: 200px
-  height: 50px
-  background-color: #FFCA00
-  font-family: "Source Sans 3", sans-serif
-  font-optical-sizing: auto
-  font-style: normal
-  font-size: 15px
-  line-height: 24px
-  color: #250F8A
-  text-transform: uppercase
-  font-weight: 600
-  border: none
-  border-radius: 25px
-  margin-top: 60px
-  cursor: pointer
-  transition: all 0.3s
-
-.header__btn:hover
-  width: 250px
-  height: 65px
-
-.header__slider
-  margin-left: 66px
-  max-width: 628px
-
-.header__slider-icon 
-  max-width: 516px
-
-.header__slider-dots
-  list-style: none
-  position: absolute
-  right: 0
-  top: 20%
-  button
-    border: none
-    background-color: #fff
-    opacity: 0.5
-    font-size: 0
-    border-radius: 3.5px
+  &__nav-btn
+    display: none
+    width: 35px
     padding: 0
-    width: 7px
-    height: 7px
+    background: none
+    border: none
     cursor: pointer
-    outline: none
-    margin: 10px auto
+
+  &__nav-close-btn
+    display: none
+    width: 35px
+    padding: 0
+    background: none
+    border: none
+    margin: 20px 20px 0 auto
+    cursor: pointer
+
+  &__nav-list
+    display: flex
+    gap: 50px
+    margin: 0
+    font-weight: 600
+    padding-left: 44px
+
+  &__nav-link
+    color: rgba(255, 255, 255, 0.5)
+    text-transform: uppercase
+    transition: all 0.3s
+    &:hover
+      color: rgba(255, 255, 255, 1) 
+
+  &__cover
+    display: flex
+
+  &__cover-content
+    max-width: 506px
+    min-width: 352px
+
+  &__title
+    color: #fff
+    font-size: 45px
+    line-height: 60px
+    font-weight: 700
+
+  &__title-descr
+    color: #fff
+    font-size: 24px
+    line-height: 55px
+
+  &__btn
+    width: 200px
+    height: 50px
+    background-color: #FFCA00
+    font-family: "Source Sans 3", sans-serif
+    font-optical-sizing: auto
+    font-style: normal
+    font-size: 15px
+    line-height: 24px
+    color: #250F8A
+    text-transform: uppercase
+    font-weight: 600
+    border: none
+    border-radius: 25px
+    margin-top: 60px
+    cursor: pointer
+    transition: all 0.3s
+    &:hover
+      width: 250px
+      height: 65px
+
+  &__slider
+    margin-left: 66px
+    max-width: 582px
+    min-width: 0
+    min-height: 0
+
+  &__slider-icon 
+    max-width: 596px
+    padding-right: 80px
     display: block
-  .slick-active
+
+  &__slider-dots
+    list-style: none
+    position: absolute
+    right: 0
+    top: 20%
     button
-      opacity: 1
-      width: 15px
+      border: none
+      background-color: #fff
+      opacity: 0.5
+      font-size: 0
+      border-radius: 3.5px
+      padding: 0
+      width: 7px
+      height: 7px
+      cursor: pointer
+      outline: none
+      margin: 10px auto
+      display: block
+    .slick-active
+      button
+        opacity: 1
+        width: 15px
+
+
+.authorization
+  &__login,
+  &__sign-up
+    color: #fff
+    text-transform: uppercase
+    padding: 10px 44px
+    transition: all 0.3s
+    font-weight: 600
+    &:hover
+      background-color: #fff
+      color: #250F8A
+      border-radius: 20px
+
 
 .specialised
   padding-bottom: 93px
@@ -149,105 +186,101 @@ ul
   background-repeat: no-repeat
   text-align: center
 
-.title 
-  font-size: 35px
-  line-height: 45px
-  font-weight: 700
-  color: #202020
+  &__cards
+    display: flex
+    gap: 70px
+    margin: 96px auto 0
+    justify-content: center
 
-.specialised__cards
-  display: flex
-  max-width: 980px
-  justify-content: space-between
-  margin: 96px auto 0
+  &__card 
+    text-align: center
+    max-width: 280px
+    
+  &__card-img 
+    margin-bottom: 23px
+    max-height: 148px
 
-.specialised__card 
-  text-align: center
-  width: 280px
-  height: 280px
-  
-.specialised__card-img 
-  margin-bottom: 23px
-  height: 158px
+  &__card-title 
+    margin-bottom: 10px
+    font-size: 20px
+    line-height: 24px
+    font-weight: 700
 
-.specialised__card-title 
-  margin-bottom: 10px
-  font-size: 20px
-  line-height: 24px
-  font-weight: 700
+  &__card-text
+    opacity: 0.7
 
-.specialised__card-text
-  opacity: 0.7
 
 .work 
   background-color: #F4F9FD
   background-image: url(../images/work-bg.svg)
-  background-position: right
+  background-position: right top 60%
   background-repeat: no-repeat
-  padding-bottom: 55px
+  padding: 55px 0
+  
+  &__title
+    margin-bottom: 30px
 
-.work__card 
-  display: flex
-  gap: 55px
-  justify-content: space-between
+  &__content 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    max-width: 460px
+    min-width: 290px
+    padding-left: 50px
+    background-repeat: no-repeat
 
-.work__title
-  margin-bottom: 30px
+  &__text
+    margin-bottom: 20px
+    opacity: 0.7
 
-.work__content 
-  display: flex
-  flex-direction: column
-  justify-content: center
-  max-width: 460px
-  padding-left: 50px
-  background-repeat: no-repeat
+  &__img
+    max-width: 660px
+    min-width: 350px
 
-.work__card:nth-child(2n)
-  .work__img
-    order: 1
-  .work__content
-    order: 2
+  &__card 
+    display: flex
+    gap: 55px
+    justify-content: space-between
+    /*Делаю каждую вторую картинку реверсивной
+    &:nth-child(2n) 
+      .work__img
+        order: 1
+      .work__content
+        order: 2
+    /*Чередую пятна на фоне
+    &:nth-child(3n+1)
+      .work__content
+        background-image: url(../images/work-title-1.svg)
+        background-position: left 25px top 80px
+    &:nth-child(3n+2)
+      .work__content
+        background-image: url(../images/work-title-2.svg)
+        background-position: left 30px top 100px
+    &:nth-child(3n+3)
+      .work__content
+        background-image: url(../images/work-title-3.svg)
+        background-position: left 10px top 120px
 
-.work__card:nth-child(3n+1)
-  .work__content
-    background-image: url(../images/work-title-1.svg)
-    background-position: left 25px top 80px
-
-.work__card:nth-child(3n+2)
-  .work__content
-    background-image: url(../images/work-title-2.svg)
-    background-position: left 30px top 100px
-
-.work__card:nth-child(3n+3)
-  .work__content
-    background-image: url(../images/work-title-3.svg)
-    background-position: left 10px top 120px
-
-
-.work__text
-  margin-bottom: 20px
-  opacity: 0.7
-
-.comments
-  background-image: url(../images/comments-bg.jpg)
+.reviews
+  background-image: url(../images/reviews-bg.jpg)
   background-size: cover
   background-repeat: no-repeat
   padding: 38px 0 82px
   color: #fff
 
-.comments__title
-  color: #fff
-  text-align: center
-  max-width: 360px
-  margin: 0 auto 48px
+  &__title
+    color: #fff
+    text-align: center
+    max-width: 360px
+    margin: 0 auto 48px
 
-.comment-boxes
-  display: flex
-  justify-content: center
-  gap: 20px
+  &__boxes
+    display: flex
+    justify-content: center
+    gap: 20px
 
 
-.comment-box
+.review
   width: 300px
   height: 261px
   display: flex
@@ -256,31 +289,174 @@ ul
   border-radius: 5px
   padding: 35px 20px
 
-.commentator
-  display: flex
-  margin-bottom: 25px
+  &__author
+    display: flex
+    margin-bottom: 25px
 
-.comment-box__img
-  border-radius: 100%
-  width: 50px
-  height: 50px
-  margin-right: 20px
+  &__img
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    margin-right: 20px
+    font-weight: 600
 
-.commentator__info
-  
+  &__decor
+    font-size: 40px
+    line-height: 25px
+    font-weight: 700
+    text-align: center
+    margin: 0
 
-.comment-box__decor
-  font-size: 40px
-  line-height: 25px
-  font-weight: 700
-  text-align: center
-  margin: 0
+  &__text
+    text-align: center
 
-.comment-box__text
-  text-align: center
+  &__profession
+    opacity: 0.5
 
-.comment-box__profesion
-  opacity: 0.5
+.footer 
+  padding: 20px 0
 
+  &__info
+    display: flex
+    justify-content: space-between
 
+  &__info-list
+    display: flex
+    gap: 30px
 
+  &__link 
+    color: #272727
+    margin: 0
+
+@media(max-width: 1180px)
+  .specialised,
+  .work
+    background-image: none
+
+@media(max-width: 980px)
+  .header
+    &__title
+      font-size: 35px
+      line-height: 45px
+    &__title-descr
+      font-size: 20px
+
+  .work
+    &__card + .work__card
+      margin-top: 50px
+
+@media(max-width: 920px)
+  .reviews
+    &__boxes
+      flex-direction: column
+  .review
+    width: 100%
+
+@media(max-width: 825px)
+  .header
+    &__nav-btn
+      display: block
+
+    &__nav
+      display: none
+
+    &__nav--open
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      background: linear-gradient(180deg, #250E8A 0%, #00F9F7 100%)
+      z-index: 10
+      button
+        display: block
+
+    &__nav-list
+      display: flex
+      flex-direction: column
+      width: 100%
+      text-align: center
+
+    &__nav-link
+      color: rgba(255, 255, 255, 1) 
+
+  .authorization
+    flex-grow: 1
+    margin: 0
+    text-align: right
+
+@media(max-width: 781px)
+  .header
+    min-height: 600px
+    &__slider
+      display: none
+
+  .specialised
+    &__cards
+      flex-direction: column
+      align-items: center
+
+  .work
+    &__card
+      flex-direction: column
+      align-items: center
+      &:nth-child(2n)
+        .work__img
+          order: 2
+        .work__content
+          order: 1
+    &__img
+      width: 100%
+      min-width: 290px
+    &__content
+      padding: 0
+@media(max-width: 624px)
+  .title
+    font-size: 30px
+    line-height: 30px
+
+  .logo
+    max-width: 100px
+
+  .header
+    &__top
+      margin-bottom: 100px
+    &__nav-btn,
+    &__nav-close-btn
+      width: 25px
+
+  .authorization
+    &__login,
+    &__sign-up
+      padding: 7px 25px
+      font-size: 12px
+      line-height: 18px
+
+  .footer
+    &__info
+      flex-wrap: wrap
+    &__info-list
+      width: 100%
+      justify-content: center
+      margin-bottom: 20px
+    &__copyrite
+      width: 100%
+      text-align: right
+
+@media(max-width: 365px)
+  .header
+    min-height: 550px
+    &__cover-content
+      max-width: 100%
+      min-width: 0
+    &__title
+      font-size: 25px
+      line-height: 30px
+    &__title-descr
+      font-size: 18px
+
+  .authorization
+    &__login,
+    &__sign-up
+      padding: 5px 16px
